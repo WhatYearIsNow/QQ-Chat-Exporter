@@ -26,10 +26,12 @@ try:
 except Exception:
     pass
 
-# ================= 配置区(可被命令行参数覆盖) =================
-DEFAULT_DB_PATH = r"C:\Users\27731\Desktop\nt_msg_decrypted.db"
-DEFAULT_EXPORT_DIR = r"C:\Users\27731\Desktop\QQ聊天记录导出"
-# ==============================================================
+# ================= 配置区(环境变量可覆盖, 命令行参数优先级最高) =================
+# 环境变量: QQEXPORT_DB / QQEXPORT_OUT 可指定数据库与输出目录
+_BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DEFAULT_DB_PATH = os.environ.get("QQEXPORT_DB", os.path.join(_BASE_DIR, "data", "nt_msg_decrypted.db"))
+DEFAULT_EXPORT_DIR = os.environ.get("QQEXPORT_OUT", os.path.join(_BASE_DIR, "export"))
+# ================================================================================
 
 
 def extract_pure_chinese(blob_data):

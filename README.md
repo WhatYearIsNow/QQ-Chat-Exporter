@@ -44,8 +44,8 @@ python extract.py --interactive
 
 | 参数 | 说明 | 默认值 |
 |---|---|---|
-| `--db` | 数据库路径 | `C:\Users\27731\Desktop\nt_msg_decrypted.db` |
-| `--out` | 输出目录 | `C:\Users\27731\Desktop\QQ聊天记录导出` |
+| `--db` | 数据库路径 | `./data/nt_msg_decrypted.db`(可用环境变量 `QQEXPORT_DB` 覆盖) |
+| `--out` | 输出目录 | `./export`(可用环境变量 `QQEXPORT_OUT` 覆盖) |
 | `--contacts` | 指定 QQ 号,逗号分隔 | 全部联系人 |
 | `--start` | 起始日期 `YYYY-MM-DD` | 不限 |
 | `--end` | 结束日期 `YYYY-MM-DD` | 不限 |
@@ -74,7 +74,7 @@ python -m pytest tests/ -v
 ## 数据来源说明
 
 - `nt_msg_decrypted.db`:NTQQ 本地数据库解密产物(需先用对应工具解密),属个人隐私数据,**不进入本仓库**
-- 导出路径默认在桌面,可自行修改
+- 默认在项目内 `data/` 读取、`export/` 输出;可通过 `--db/--out` 参数或环境变量修改
 
 ## 注意事项
 
