@@ -8,8 +8,21 @@ __pycache__/
 *.py[cod]
 .venv/
 venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# 测试临时目录
+.testtmp/
 
 # 导出产物(聊天记录属隐私,留在本地,不入 Git)
 桌面导出/
 Desktop/
 QQ聊天记录导出/
+
+# 编辑器与系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
