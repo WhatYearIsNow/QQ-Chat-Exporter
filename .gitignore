@@ -1,0 +1,15 @@
+# 隐私数据(不入库)
+nt_msg_decrypted.db
+*.db
+*.db.*
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# 导出产物(聊天记录属隐私,留在本地,不入 Git)
+桌面导出/
+Desktop/
+QQ聊天记录导出/
