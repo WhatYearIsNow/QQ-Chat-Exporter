@@ -16,6 +16,7 @@ venv/
 .testtmp/
 
 # 导出产物(聊天记录属隐私,留在本地,不入 Git)
+/export/
 桌面导出/
 Desktop/
 QQ聊天记录导出/
